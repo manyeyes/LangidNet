@@ -1,4 +1,4 @@
-﻿# NLangid
+﻿# LangidNet
 A c# library for language identification of text
 
 ### comes pre-trained on 97 languages (ISO 639-1 codes given):
@@ -7,11 +7,12 @@ A c# library for language identification of text
 
 Run the example
 ----------
+the sample code:
 ```
-NLangid.LangidRecognizer langidRecognizer = new NLangid.LangidRecognizer();
-NLangid.TextStream stream = langidRecognizer.CreateTextStream();
+LangidNet.LangidRecognizer langidRecognizer = new LangidNet.LangidRecognizer();
+LangidNet.TextStream stream = langidRecognizer.CreateTextStream();
 stream.AddText("Hello world!");
-NLangid.Model.LangidRecognizerResultEntity langidRecognizerResultEntity = new NLangid.Model.LangidRecognizerResultEntity();
+LangidNet.Model.LangidRecognizerResultEntity langidRecognizerResultEntity = new LangidNet.Model.LangidRecognizerResultEntity();
 langidRecognizerResultEntity = langidRecognizer.GetResult(stream);
 Console.WriteLine(langidRecognizerResultEntity.Language);
 ```
